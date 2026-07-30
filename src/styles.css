@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: #FFFFFF;
+    color: #1C1C1C;
+    font-family: 'Instrument Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { text-decoration: none; color: inherit; }
+  img { display: block; max-width: 100%; }
+}
+
+@layer components {
+  .btn-red {
+    display: inline-block;
+    background: #EB332B;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 13px 32px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background 0.18s;
+  }
+  .btn-red:hover { background: #C92820; }
+
+  .btn-black {
+    display: inline-block;
+    background: #1C1C1C;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 13px 32px;
+    border: 1.5px solid #1C1C1C;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background 0.18s;
+  }
+  .btn-black:hover { background: #333; }
+
+  .btn-outline {
+    display: inline-block;
+    background: transparent;
+    color: #1C1C1C;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 12px 31px;
+    border: 1.5px solid #1C1C1C;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.18s;
+  }
+  .btn-outline:hover { background: #1C1C1C; color: #fff; }
+
+  .section-title {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .shop-link {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}

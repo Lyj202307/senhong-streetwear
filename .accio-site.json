@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "siteId": "senhong-streetwear",
+  "name": "senhong-streetwear",
+  "kind": "react-vite",
+  "devCommand": "vite",
+  "buildCommand": "vite build",
+  "outputDir": "dist",
+  "entry": "index.html",
+  "databaseUrl": "",
+  "createdBy": "accio-site-builder",
+  "createdAt": "2026-07-28T09:52:30.708Z",
+  "installedAt": "2026-07-28T10:13:12.698Z"
+}
