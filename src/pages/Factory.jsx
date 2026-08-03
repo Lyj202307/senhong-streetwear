@@ -1,3 +1,4 @@
+import { BASE_URL } from "../baseUrl";
 import { Link } from 'react-router-dom';
 
 const stats = [
@@ -53,7 +54,7 @@ export default function Factory() {
 
       {/* ── FACTORY HERO IMAGE ── */}
       <div style={{ height: 'clamp(220px, 35vw, 400px)', overflow: 'hidden' }}>
-        <img src="/assets/images/ai-factory.png" alt="SENHONG STUDIO Factory Floor"
+        <img src={`${BASE_URL}assets/images/ai-factory.png`} alt="SENHONG STUDIO Factory Floor"
           style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%', display: 'block' }} />
       </div>
 
@@ -76,13 +77,13 @@ export default function Factory() {
       {/* ── PHOTO GRID ── */}
       <div style={{ maxWidth: 1100, margin: '48px auto 0', padding: '0 24px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }} className="fc-imgs">
-          <img src="/assets/images/ai-hoodie.png" alt="Heavyweight hoodie production" style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', objectPosition: 'top' }} />
-          <img src="/assets/images/ai-tshirt.png" alt="T-shirt QC inspection" style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', objectPosition: 'top' }} />
+          <img src={`${BASE_URL}assets/images/ai-hoodie.png`} alt="Heavyweight hoodie production" style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', objectPosition: 'top' }} />
+          <img src={`${BASE_URL}assets/images/ai-tshirt.png`} alt="T-shirt QC inspection" style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', objectPosition: 'top' }} />
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 16 }} className="fc-imgs2">
-          <img src="/assets/images/ai-pants.png" alt="Pants production line" style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', objectPosition: 'top' }} />
-          <img src="/assets/images/ai-jacket.png" alt="Jacket assembly" style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', objectPosition: 'top' }} />
-          <img src="/assets/images/ai-flatlay.png" alt="Sample flatlay" style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', objectPosition: 'top' }} />
+          <img src={`${BASE_URL}assets/images/ai-pants.png`} alt="Pants production line" style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', objectPosition: 'top' }} />
+          <img src={`${BASE_URL}assets/images/ai-jacket.png`} alt="Jacket assembly" style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', objectPosition: 'top' }} />
+          <img src={`${BASE_URL}assets/images/ai-flatlay.png`} alt="Sample flatlay" style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', objectPosition: 'top' }} />
         </div>
         <style>{`@media(max-width:640px){.fc-imgs,.fc-imgs2{grid-template-columns:1fr !important}}`}</style>
       </div>

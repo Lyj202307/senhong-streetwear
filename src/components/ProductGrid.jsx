@@ -29,7 +29,7 @@ export default function ProductGrid({ category }) {
           <div className="aspect-[3/4] bg-card flex items-center justify-center relative overflow-hidden">
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-              style={{ backgroundImage: 'url("/assets/images/placeholder.svg")' }}
+              style={{ backgroundImage: `url(${BASE_URL}assets/images/placeholder.svg)` }}
             />
             <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
               <span className="text-xs uppercase tracking-widest text-gold font-bold px-4 py-2 border border-gold">

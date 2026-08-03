@@ -1,3 +1,4 @@
+import { BASE_URL } from "../baseUrl";
 import { Link } from 'react-router-dom';
 
 const timeline = [
@@ -51,7 +52,7 @@ export default function About() {
             <Link to="/contact" className="btn-red">GET A QUOTE</Link>
           </div>
           <div>
-            <img src="/assets/images/ai-model-1.png" alt="SENHONG STUDIO — OEM Streetwear Manufacturing"
+            <img src={`${BASE_URL}assets/images/ai-model-1.png`} alt="SENHONG STUDIO — OEM Streetwear Manufacturing"
               style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', objectPosition: 'top', display: 'block' }} />
           </div>
         </div>

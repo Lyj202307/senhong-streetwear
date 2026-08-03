@@ -1,3 +1,4 @@
+import { BASE_URL } from "../baseUrl";
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Factory, ShieldCheck, Palette, Truck } from 'lucide-react';
@@ -31,7 +32,7 @@ export default function Home() {
     <div style={{ background: '#fff' }}>
       {/* ── HERO ── */}
       <div style={{ position: 'relative', overflow: 'hidden', background: '#0a0a0a' }}>
-        <img src="/assets/images/hero-new.jpg" alt="SENHONG STUDIO Streetwear Manufacturing"
+        <img src={`${BASE_URL}assets/images/hero-new.jpg`} alt="SENHONG STUDIO Streetwear Manufacturing"
           style={{ width: '100%', height: 'clamp(360px, 50vw, 520px)', objectFit: 'cover', objectPosition: 'center 40%', display: 'block' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.35) 100%)' }} />
         <div style={{ position: 'absolute', bottom: 40, left: '5%', maxWidth: 460 }}>
@@ -119,7 +120,7 @@ export default function Home() {
 
       {/* ── FACTORY IMAGE BAND ── */}
       <div style={{ position: 'relative', marginTop: 56, overflow: 'hidden' }}>
-        <img src="/assets/images/ai-factory.png" alt="Factory" style={{ width: '100%', height: 'clamp(240px, 40vw, 380px)', objectFit: 'cover', objectPosition: 'center', display: 'block' }} />
+        <img src={`${BASE_URL}assets/images/ai-factory.png`} alt="Factory" style={{ width: '100%', height: 'clamp(240px, 40vw, 380px)', objectFit: 'cover', objectPosition: 'center', display: 'block' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.45)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 14 }}>
           <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 10, fontWeight: 700, letterSpacing: '0.35em', textTransform: 'uppercase' }}>Factory Verification Welcome</p>
           <h2 style={{ color: '#fff', fontSize: 'clamp(20px, 3vw, 28px)', fontWeight: 900, letterSpacing: '0.06em', textTransform: 'uppercase', textAlign: 'center', maxWidth: 480 }}>SEE OUR FLOOR FIRSTHAND</h2>
