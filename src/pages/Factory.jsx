@@ -53,9 +53,14 @@ export default function Factory() {
       </div>
 
       {/* ── FACTORY HERO IMAGE ── */}
-      <div style={{ height: 'clamp(220px, 35vw, 400px)', overflow: 'hidden' }}>
-        <img src={`${BASE_URL}assets/images/ai-factory.png`} alt="SENHONG STUDIO Factory Floor"
-          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%', display: 'block' }} />
+      <div style={{ height: 'clamp(260px, 40vw, 460px)', overflow: 'hidden', position: 'relative' }}>
+        <img src={`${BASE_URL}assets/images/factory-line.jpg`} alt="SENHONG STUDIO Factory Floor"
+          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 40%', display: 'block' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%)' }} />
+        <div style={{ position: 'absolute', bottom: 36, left: '5%', right: '5%', maxWidth: 640 }}>
+          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 10, fontWeight: 700, letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: 8 }}>Vertically Integrated Production</p>
+          <h2 style={{ color: '#fff', fontSize: 'clamp(20px, 3.2vw, 30px)', fontWeight: 900, letterSpacing: '0.06em', textTransform: 'uppercase', margin: 0 }}>ONE ROOF. FULL CONTROL. ZERO SUBCONTRACTING.</h2>
+        </div>
       </div>
 
       {/* ── PRODUCTION LINES ── */}
@@ -77,8 +82,8 @@ export default function Factory() {
       {/* ── PHOTO GRID ── */}
       <div style={{ maxWidth: 1100, margin: '48px auto 0', padding: '0 24px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }} className="fc-imgs">
+          <img src={`${BASE_URL}assets/images/qc-inspect.jpg`} alt="Garment QC inspection" style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', objectPosition: 'center' }} />
           <img src={`${BASE_URL}assets/images/ai-hoodie.png`} alt="Heavyweight hoodie production" style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', objectPosition: 'top' }} />
-          <img src={`${BASE_URL}assets/images/ai-tshirt.png`} alt="T-shirt QC inspection" style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', objectPosition: 'top' }} />
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 16 }} className="fc-imgs2">
           <img src={`${BASE_URL}assets/images/ai-pants.png`} alt="Pants production line" style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', objectPosition: 'top' }} />
@@ -86,6 +91,31 @@ export default function Factory() {
           <img src={`${BASE_URL}assets/images/ai-flatlay.png`} alt="Sample flatlay" style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', objectPosition: 'top' }} />
         </div>
         <style>{`@media(max-width:640px){.fc-imgs,.fc-imgs2{grid-template-columns:1fr !important}}`}</style>
+      </div>
+
+      {/* ── PRODUCTION FLOW ── */}
+      <div style={{ background: '#0A0A0A', marginTop: 56, padding: '64px 24px' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+          <p style={{ textAlign: 'center', color: '#666', fontSize: 10, fontWeight: 700, letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: 10 }}>Garment Journey</p>
+          <h2 style={{ color: '#fff', textAlign: 'center', fontSize: 20, fontWeight: 900, letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: 48 }}>6-STAGE PRODUCTION FLOW</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: 0 }} className="flow">
+            {[
+              { n: '01', t: 'Fabric Intake', d: 'AQL-verified rolls. Shrinkage, colour & weight tested before cutting.' },
+              { n: '02', t: 'Pattern & Cut', d: 'CAD-graded patterns. 12 auto cutters, 8,000+ pcs per day.' },
+              { n: '03', t: 'Sewing', d: '180+ stations. Single-needle, overlock, flatlock, bartack.' },
+              { n: '04', t: 'Wash & Print', d: 'Enzyme, acid wash, DTG, screen print & embroidery in-house.' },
+              { n: '05', t: 'QC Inspection', d: '15-person team. AQL 2.5 inline + 100% final visual check.' },
+              { n: '06', t: 'Pack & Ship', d: 'Barcode-tracked packing. FOB / CIF / DDP to 100+ countries.' },
+            ].map((s, i) => (
+              <div key={s.n} style={{ textAlign: 'center', padding: '28px 16px', borderRight: i < 5 ? '1px solid rgba(255,255,255,0.08)' : 'none' }}>
+                <div style={{ width: 44, height: 44, margin: '0 auto 14px', borderRadius: '50%', border: '2px solid #EB332B', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, fontWeight: 900, color: '#EB332B' }}>{s.n}</div>
+                <h3 style={{ color: '#fff', fontSize: 12, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 8 }}>{s.t}</h3>
+                <p style={{ fontSize: 11, color: '#888', lineHeight: 1.7 }}>{s.d}</p>
+              </div>
+            ))}
+          </div>
+          <style>{`@media(max-width:900px){.flow{grid-template-columns:1fr 1fr 1fr !important}}@media(max-width:500px){.flow{grid-template-columns:1fr 1fr !important}}`}</style>
+        </div>
       </div>
 
       {/* ── CERTIFICATIONS ── */}

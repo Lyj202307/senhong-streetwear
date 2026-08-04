@@ -32,8 +32,8 @@ export default function Home() {
     <div style={{ background: '#fff' }}>
       {/* ── HERO ── */}
       <div style={{ position: 'relative', overflow: 'hidden', background: '#0a0a0a' }}>
-        <img src={`${BASE_URL}assets/images/hero-new.jpg`} alt="SENHONG STUDIO Streetwear Manufacturing"
-          style={{ width: '100%', height: 'clamp(360px, 50vw, 520px)', objectFit: 'cover', objectPosition: 'center 40%', display: 'block' }} />
+        <img src={`${BASE_URL}assets/images/hero-v2.jpg`} alt="SENHONG STUDIO Streetwear Manufacturing"
+          style={{ width: '100%', height: 'clamp(400px, 55vw, 600px)', objectFit: 'cover', objectPosition: 'center 30%', display: 'block' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.35) 100%)' }} />
         <div style={{ position: 'absolute', bottom: 40, left: '5%', maxWidth: 460 }}>
           <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 10, fontWeight: 700, letterSpacing: '0.35em', textTransform: 'uppercase', margin: '0 0 10px 0' }}>
@@ -81,6 +81,28 @@ export default function Home() {
       </div>
       <style>{`@media(max-width:900px){.caps{grid-template-columns:1fr 1fr !important}}@media(max-width:500px){.caps{grid-template-columns:1fr !important}}`}</style>
 
+      {/* ── HOW IT WORKS ── */}
+      <div style={{ maxWidth: 1400, margin: '0 auto', padding: '72px 24px 8px' }}>
+        <p style={{ textAlign: 'center', fontSize: 10, fontWeight: 700, letterSpacing: '0.35em', textTransform: 'uppercase', color: '#999', marginBottom: 10 }}>From Concept To Delivery</p>
+        <h2 style={{ textAlign: 'center', fontSize: 26, fontWeight: 900, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 48 }}>HOW ODM WORKS</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 0 }} className="hw">
+          {[
+            { n: '01', t: 'Share Your Idea', d: 'Send a tech pack, reference photo, or sketch. Our team reviews within 12 hours.' },
+            { n: '02', t: 'Sourcing & Samples', d: 'We source fabrics and produce a physical sample with your branding. Approve or refine.' },
+            { n: '03', t: 'Bulk Production', d: 'Pattern grading, cutting, sewing and finishing across 8 production lines.' },
+            { n: '04', t: '8-Stage QC', d: 'Inline checks at every station. Final AQL 2.5 inspection before packing.' },
+            { n: '05', t: 'Global Delivery', d: 'FOB, CIF or DDP. Barcode-tracked packing, shipped to 100+ countries.' },
+          ].map((s, i) => (
+            <div key={s.n} style={{ position: 'relative', padding: '24px 28px', borderRight: i < 4 ? '1px solid #eee' : 'none' }}>
+              <div style={{ fontSize: 34, fontWeight: 900, color: '#EB332B', lineHeight: 1, marginBottom: 14, opacity: 0.9 }}>{s.n}</div>
+              <h3 style={{ fontSize: 13, fontWeight: 700, letterSpacing: '0.04em', marginBottom: 8 }}>{s.t}</h3>
+              <p style={{ fontSize: 12, color: '#777', lineHeight: 1.7 }}>{s.d}</p>
+            </div>
+          ))}
+        </div>
+        <style>{`@media(max-width:900px){.hw{grid-template-columns:1fr 1fr !important}}@media(max-width:500px){.hw{grid-template-columns:1fr !important}}`}</style>
+      </div>
+
       {/* ── NEW ARRIVALS ── */}
       <div style={{ borderTop: '1px solid #E5E5E5', maxWidth: 1400, margin: '0 auto', padding: '56px 24px 0' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 28 }}>
@@ -120,7 +142,7 @@ export default function Home() {
 
       {/* ── FACTORY IMAGE BAND ── */}
       <div style={{ position: 'relative', marginTop: 56, overflow: 'hidden' }}>
-        <img src={`${BASE_URL}assets/images/ai-factory.png`} alt="Factory" style={{ width: '100%', height: 'clamp(240px, 40vw, 380px)', objectFit: 'cover', objectPosition: 'center', display: 'block' }} />
+        <img src={`${BASE_URL}assets/images/factory-line.jpg`} alt="Factory" style={{ width: '100%', height: 'clamp(280px, 42vw, 420px)', objectFit: 'cover', objectPosition: 'center', display: 'block' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.45)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 14 }}>
           <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 10, fontWeight: 700, letterSpacing: '0.35em', textTransform: 'uppercase' }}>Factory Verification Welcome</p>
           <h2 style={{ color: '#fff', fontSize: 'clamp(20px, 3vw, 28px)', fontWeight: 900, letterSpacing: '0.06em', textTransform: 'uppercase', textAlign: 'center', maxWidth: 480 }}>SEE OUR FLOOR FIRSTHAND</h2>
